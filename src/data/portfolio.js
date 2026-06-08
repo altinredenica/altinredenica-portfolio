@@ -1,3 +1,14 @@
+export const seo = {
+  siteTitle: "Altin Redenica Portfolio",
+  title: "Altin Redenica Portfolio",
+  description:
+    "Altin Redenica Portfolio",
+  keywords:
+    "Altin Redenica, Frontend Developer, React Developer, TypeScript, JavaScript, Web Developer, UI Engineer, Portfolio",
+  siteUrl: "https://altin.dev",
+  author: "Altin Redenica",
+};
+
 export const personalInfo = {
   name: "Altin",
   title: "Frontend Developer",

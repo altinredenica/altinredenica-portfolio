@@ -11,30 +11,27 @@ import Education from "./components/sections/Education";
 import Contact from "./components/sections/Contact";
 import ScrollProgress from "./components/ui/ScrollProgress";
 import PageLoader from "./components/ui/PageLoader";
-import { personalInfo } from "./data/portfolio";
+import { seo } from "./data/portfolio";
 
 export default function App() {
   return (
     <div className="noise-overlay min-h-screen bg-[#0c0c0e] light:bg-[#fafafa]">
       <Helmet>
         <html lang="en" />
-        <title>{personalInfo.name} — Expert Frontend Developer</title>
-        <meta
-          name="description"
-          content={`${personalInfo.name} is an expert Frontend Developer specializing in React, TypeScript, and high-performance web applications. ${personalInfo.intro}`}
-        />
-        <meta
-          name="keywords"
-          content="Frontend Developer, React Developer, TypeScript, JavaScript, Web Developer, UI Engineer, Portfolio, Altin"
-        />
-        <meta name="author" content={personalInfo.name} />
-        <meta property="og:title" content={`${personalInfo.name} — Expert Frontend Developer`} />
-        <meta property="og:description" content={personalInfo.headline} />
+        <title>{seo.title}</title>
+        <meta name="description" content={seo.description} />
+        <meta name="keywords" content={seo.keywords} />
+        <meta name="author" content={seo.author} />
+        <meta property="og:site_name" content={seo.siteTitle} />
+        <meta property="og:title" content={seo.title} />
+        <meta property="og:description" content={seo.description} />
         <meta property="og:type" content="website" />
+        <meta property="og:url" content={seo.siteUrl} />
+        <meta property="og:locale" content="en_US" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={`${personalInfo.name} — Expert Frontend Developer`} />
-        <meta name="twitter:description" content={personalInfo.headline} />
-        <link rel="canonical" href="https://altin.dev" />
+        <meta name="twitter:title" content={seo.title} />
+        <meta name="twitter:description" content={seo.description} />
+        <link rel="canonical" href={seo.siteUrl} />
       </Helmet>
 
       <PageLoader />
