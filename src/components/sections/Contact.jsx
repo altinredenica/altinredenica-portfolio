@@ -180,7 +180,7 @@ export default function Contact() {
                   onBlur={() => setFocused(null)}
                   required
                   autoComplete="name"
-                  placeholder="John Doe"
+                  placeholder=""
                   className={inputClasses("name")}
                 />
               </div>
@@ -198,7 +198,7 @@ export default function Contact() {
                   onBlur={() => setFocused(null)}
                   required
                   autoComplete="email"
-                  placeholder="you@company.com"
+                  placeholder=""
                   className={inputClasses("email")}
                 />
               </div>
@@ -216,7 +216,7 @@ export default function Contact() {
                 onBlur={() => setFocused(null)}
                 required
                 rows={6}
-                placeholder="Tell me about your project, timeline, and goals..."
+                placeholder=""
                 className={`${inputClasses("message")} resize-none`}
               />
             </div>
