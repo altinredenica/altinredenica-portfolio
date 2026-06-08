@@ -1,4 +1,4 @@
-# Maltina — Premium Frontend Developer Portfolio
+# Altin — Premium Frontend Developer Portfolio
 
 A premium, production-ready portfolio website built with React, Tailwind CSS, and Framer Motion. Designed to position you as an expert frontend engineer with exceptional UI/UX craftsmanship.
 

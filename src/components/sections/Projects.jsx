@@ -9,6 +9,10 @@ import { useSpotlight } from "../../hooks/useSpotlight";
 function ProjectCard({ project, index }) {
   const handleSpotlight = useSpotlight();
 
+  const openLiveDemo = () => {
+    window.open(project.liveUrl, "_blank", "noopener,noreferrer");
+  };
+
   return (
     <motion.article
       initial={{ opacity: 0, y: 40 }}
@@ -16,7 +20,17 @@ function ProjectCard({ project, index }) {
       viewport={{ once: true, margin: "-40px" }}
       transition={{ duration: 0.7, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
       onMouseMove={handleSpotlight}
-      className={`card-spotlight group relative overflow-hidden rounded-3xl border border-white/6 bg-[#131316] transition-all duration-500 hover:border-cyan-400/20 light:border-zinc-200 light:bg-white light:hover:border-cyan-500/30 ${
+      onClick={openLiveDemo}
+      onKeyDown={(e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          openLiveDemo();
+        }
+      }}
+      role="link"
+      tabIndex={0}
+      aria-label={`View ${project.title} live demo`}
+      className={`card-spotlight group relative cursor-pointer overflow-hidden rounded-3xl border border-white/6 bg-[#131316] transition-all duration-500 hover:border-cyan-400/20 light:border-zinc-200 light:bg-white light:hover:border-cyan-500/30 ${
         project.featured ? "lg:col-span-2" : ""
       }`}
     >
@@ -73,7 +87,10 @@ function ProjectCard({ project, index }) {
           ))}
         </div>
 
-        <div className="mt-8 flex items-center gap-6 border-t border-white/6 pt-6 light:border-zinc-200">
+        <div
+          className="mt-8 flex items-center gap-6 border-t border-white/6 pt-6 light:border-zinc-200"
+          onClick={(e) => e.stopPropagation()}
+        >
           <a
             href={project.liveUrl}
             target="_blank"
