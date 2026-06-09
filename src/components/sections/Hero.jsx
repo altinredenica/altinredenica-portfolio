@@ -65,7 +65,6 @@ export default function Hero() {
               variants={item}
               className="font-display text-[clamp(2.5rem,6vw,4.5rem)] font-bold leading-[1.05] tracking-tight text-zinc-50 light:text-zinc-900"
             >
-              Expert{" "}
               <span className="text-gradient">Frontend</span>
               <br />
               Developer
